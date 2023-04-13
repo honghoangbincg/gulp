@@ -7,6 +7,16 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const replace = require("gulp-replace");
 const browsersync = require("browser-sync").create();
+// dest() được sử dụng để chỉ dẫn đến thư mục đích
+// src() được sử dụng chỉ định các tệp cần chạy gulp
+// watch() theo dõi sự thay đổi và chạy tệp khi có sự thay đổi đó
+// series() được sự dụng để chạy các tác vụ một cách có tuần tự
+// parallel() được sự dụng để chạy các tác vụ 1 cách đồng thời
+// gulp-concat: sử dụng để nối nhiều tệp thành 1 tệp duy nhất
+// gulp-terser: sự dụng để nén tệp js
+// autoprefixer - gulp-postcss - cssnano: được sử dụng để xử lý css bằng PostCSS
+// gulp-replace: tìm kiếm và thay thế nội dung trong các file - (tránh cache trên trình duyệt)
+// browser-sync: cung cấp khả năng tự động reload web khi mã nguồi thay đổi
 
 const files = {
   scssPath: "src/scss/**/*.scss",
